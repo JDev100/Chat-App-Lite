@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
 
 :root {
-	--dark-color-a: #667aff;
-	--dark-color-b: #7386ff;
+	--dark-color-a: #212027;
+	--dark-color-b: #2b2a33;
+	--dark-color-c: #42414d;
 	--light-color: #e6e9ff;
+	--primary-color: #ae080b;
 	--success-color: #5cb85c;
 	--error-color: #d9534f;
 }
@@ -34,8 +36,8 @@ a {
 .btn {
 	cursor: pointer;
 	padding: 5px 15px;
-	background: var(--light-color);
-	color: var(--dark-color-a);
+	background: var(--primary-color);
+	color: var(--light-color);
 	border: 0;
 	font-size: 17px;
 }
@@ -43,7 +45,7 @@ a {
 /* Chat Page */
 
 .chat-container {
-	max-width: 1100px;
+	/* max-width: 1100px; */
 	background: #fff;
 	margin: 0 auto;
 	overflow: hidden;
@@ -69,10 +71,12 @@ a {
   height: 100vh;
 }
 .chat-main {
-	flex: 1;
+	flex: 1 1 auto;
 	/* display: grid; */
 	display: flex;
-	height: 100%;
+	/* height: 100%; */
+	overflow: auto;
+	background-color: var(--dark-color-c);
 	/* max-height: 100vh; */
 
 	/* grid-template-columns: 1fr 3fr; */
@@ -106,8 +110,8 @@ a {
 	flex: 1;
 	padding: 30px;
 	overflow-y: scroll;
-	max-height: 75vh;
-
+	max-height: 100vh;
+	background-color: var(--dark-color-c);
 }
 
 .avatar {
@@ -177,6 +181,10 @@ a {
 }
 
 .chat-form-container {
+	/* position: absolute; */
+	/* bottom: 0; */
+	/* width: 100%; */
+	/* margin: auto; */
 	padding: 20px 30px;
 	background-color: var(--dark-color-a);
 }
